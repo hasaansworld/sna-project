@@ -230,5 +230,5 @@ def create_yearly_datasets(openalex_id):
 # Example usage
 if __name__ == "__main__":
     # Replace with your target paper's OpenAlex ID
-    openalex_id = "W2464236921"  
+    openalex_id = "W2117364842"  
     create_yearly_datasets(openalex_id)
