@@ -64,10 +64,10 @@ python main.py
 
 This process consists of three scripts that should be run sequentially:
 
-#### a. Create dataset for a specific paper
-Choose one paper from the set of 6 papers. Copy its OpenAlex ID (starts with W).
-**Edit the main function at the end of the create_dataset.py script to specify the paper's OpenAlex ID**.
-Then run:
+### a. Create dataset for a specific paper
+1. Choose one paper from the set of 6 papers. Copy its OpenAlex ID (starts with W).
+2. **Edit the main function at the end of the create_dataset.py script to specify the paper's OpenAlex ID**.
+3. Then run:
 
 ```bash
 python create_dataset.py
@@ -77,10 +77,11 @@ This script:
 - Creates a dataset for Novelpy analysis based on the paper's two main concepts
 - Saves the dataset in `Data/docs/[paper_id]/`
 
-#### b. Run novelty analysis
-Now you will have the dataset for the selected paper in `Data/docs/[paper_id]/`. It will have json files for each year (eg 2011.json, 2012.json and so on...). Note the first year and the last year. 
-**Now Modify the paper ID, start_year and end_year in the analysis.py script (the first and last year in the dataset)**.
-The run:
+### b. Run novelty analysis
+1. Now you will have the dataset for the selected paper in `Data/docs/[paper_id]/`. It will have json files for each year (eg 2011.json, 2012.json and so on...).
+2. Note the first year and the last year. 
+3. **Now Modify the paper ID, start_year and end_year in the analysis.py script (the first and last year in the dataset)**.
+4. Then run:
 
 ```bash
 python analysis.py
@@ -91,9 +92,9 @@ This script:
 - Uses the Uzzi2013, Lee2015, Foster2015, and Wang2017 methods from Novelpy
 - Analyzes for each year in the specified range
 
-#### c. Visualize results
-**Now modify start_year and end_year in plot.py (keep these values same as analysis.py)**
-Then run:
+### c. Visualize results
+1. **Now modify start_year and end_year in plot.py (keep these values same as analysis.py)**
+2. Then run:
 ```bash
 python plot.py
 ```
