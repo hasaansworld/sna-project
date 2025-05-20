@@ -65,8 +65,8 @@ python main.py
 This process consists of three scripts that should be run sequentially:
 
 #### a. Create dataset for a specific paper
-Choose one paper from the set of 6 papers. Copy its OpenAlex ID (starts with W)
-**Edit the main function at the end of the create_dataset.py script to specify the paper's OpenAlex ID**
+Choose one paper from the set of 6 papers. Copy its OpenAlex ID (starts with W).
+**Edit the main function at the end of the create_dataset.py script to specify the paper's OpenAlex ID**.
 Then run:
 
 ```bash
@@ -79,7 +79,7 @@ This script:
 
 #### b. Run novelty analysis
 Now you will have the dataset for the selected paper in `Data/docs/[paper_id]/`. It will have json files for each year (eg 2011.json, 2012.json and so on...). Note the first year and the last year. 
-**Now Modify the paper ID, start_year and end_year in the analysis.py script**
+**Now Modify the paper ID, start_year and end_year in the analysis.py script**.
 The run:
 
 ```bash
