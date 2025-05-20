@@ -79,7 +79,7 @@ This script:
 
 #### b. Run novelty analysis
 Now you will have the dataset for the selected paper in `Data/docs/[paper_id]/`. It will have json files for each year (eg 2011.json, 2012.json and so on...). Note the first year and the last year. 
-**Now Modify the paper ID, start_year and end_year in the analysis.py script**.
+**Now Modify the paper ID, start_year and end_year in the analysis.py script (the first and last year in the dataset)**.
 The run:
 
 ```bash
@@ -92,7 +92,7 @@ This script:
 - Analyzes for each year in the specified range
 
 #### c. Visualize results
-**Now modify start_year and end_year before running the script (keep yearly values same as analysis.py)**
+**Now modify start_year and end_year in plot.py (keep these values same as analysis.py)**
 Then run:
 ```bash
 python plot.py
