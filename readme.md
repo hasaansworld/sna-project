@@ -33,7 +33,9 @@ cd sna-project
 ```
 
 2. Create a python3.9 virtual environment (Novelpy doesn't install on latest python versions)
-*You will need to install Python 3.9 before continuing further*
+   
+**You will need to install Python 3.9 before continuing further**
+
 ```bash
 python3.9 -m venv venv
 source venv/bin/activate # or venv\Scripts\activate on windows
@@ -72,7 +74,7 @@ This process consists of three scripts that should be run sequentially:
 ```bash
 python create_dataset.py
 ```
-*Note: Edit the main function at the end of the script to specify the paper's OpenAlex ID*
+**Note: Edit the main function at the end of the script to specify the paper's OpenAlex ID**
 
 This script:
 - Creates a dataset for Novelpy analysis based on the paper's two main concepts
@@ -84,7 +86,7 @@ This script:
 python analysis.py
 ```
 
-*Note: Modify the paper ID and start_year and end_year (you should use first and last year from the `json` files in the dataset folder)*
+**Note: Modify the paper ID, start_year and end_year before running the script (you should use first and last year from the `json` files in the dataset folder)**
 
 This script:
 - Calculates four novelty indicators (Atypicality, Commonness, Bridging, Novelty)
@@ -96,7 +98,7 @@ This script:
 ```bash
 python plot.py
 ```
-*Note:  Modify start_year and end_year in the script (from `json` files in the dataset folder)*
+**Note:  Modify start_year and end_year before running the script (from `json` files in the dataset folder)**
 This script:
 - Plots the most recent results from the analysis
 - *Important: Use the same year range as in the analysis step*
