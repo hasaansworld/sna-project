@@ -32,10 +32,12 @@ git clone git@github.com:hasaansworld/sna-project.git
 cd sna-project
 ```
 
-2. Install python3.9. Novelpy doesn't install on latest python versions for some reason.
+2. Install `Python 3.9`. Novelpy doesn't install on latest python versions for some reason.
 
 [Windows](https://www.python.org/downloads/release/python-390/)
-[Linux Tutorial](https://medium.com/@sujeeth.selvam/installing-python-3-9-on-ubuntu-linux-908b1c5e060f)
+
+[Linux](https://medium.com/@sujeeth.selvam/installing-python-3-9-on-ubuntu-linux-908b1c5e060f)
+
 MacOS: 
 ```bash
 brew install python@3.9
