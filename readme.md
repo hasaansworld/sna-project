@@ -32,9 +32,8 @@ git clone git@github.com:hasaansworld/sna-project.git
 cd sna-project
 ```
 
-2. Create a python3.9 virtual environment (Novelpy doesn't install on latest python versions)
-   
-**You will need to install Python 3.9 before continuing further**
+**2. Create a python3.9 virtual environment (Novelpy doesn't install on latest python versions)
+   You will need to install Python 3.9 before continuing further**
 
 ```bash
 python3.9 -m venv venv
