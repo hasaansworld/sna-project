@@ -46,11 +46,6 @@ source venv/bin/activate # or venv\Scripts\activate on windows
 pip install -r requirements.txt
 ```
 
-4. Install Novelpy package:
-```bash
-pip install novelpy
-```
-
 ## Usage
 
 ### 1. Main Analysis (Steps 1-4)
