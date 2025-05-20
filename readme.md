@@ -28,16 +28,22 @@ The project comprises several analytical components:
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/citation-network-novelty.git
-cd citation-network-novelty
+git clone git@github.com:hasaansworld/sna-project.git
+cd sna-project
 ```
 
-2. Install required dependencies:
+2. Create a python3.9 virtual environment (Novelpy doesn't install on latest python versions)
+```bash
+python3.9 -m venv venv
+source venv/bin/activate # or venv\Scripts\activate on windows
+```
+
+3. Install required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Install Novelpy package:
+4. Install Novelpy package:
 ```bash
 pip install novelpy
 ```
@@ -74,8 +80,10 @@ This script:
 #### b. Run novelty analysis
 
 ```bash
-python analysis.py --paper_id W123456789 --start_year 2010 --end_year 2020
+python analysis.py
 ```
+
+*Note: Modify the paper ID and start_year and end_year (you should use first and last year from the `json` files in the dataset folder)*
 
 This script:
 - Calculates four novelty indicators (Atypicality, Commonness, Bridging, Novelty)
@@ -85,9 +93,9 @@ This script:
 #### c. Visualize results
 
 ```bash
-python plot.py --start_year 2010 --end_year 2020
+python plot.py
 ```
-
+*Note:  Modify start_year and end_year in the script (from `json` files in the dataset folder)*
 This script:
 - Plots the most recent results from the analysis
 - *Important: Use the same year range as in the analysis step*
@@ -121,7 +129,7 @@ Using Novelpy, we calculate four indicators for each paper over a 10-year period
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.9
 - requests
 - pandas
 - numpy
@@ -137,19 +145,3 @@ Using Novelpy, we calculate four indicators for each paper over a 10-year period
 - Novelty metrics are influenced by the quality of the created dataset
 - The focal year selection can significantly impact novelty calculations
 
-## Contributing
-
-If you wish to contribute to this project, please:
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request with a clear description of your changes
-
-## License
-
-[Specify your license here]
-
-## Acknowledgments
-
-- OpenAlex for providing the citation data API
-- Novelpy developers for implementing the novelty metrics
-- [Any other acknowledgments]
