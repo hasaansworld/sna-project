@@ -91,6 +91,7 @@ This script:
 - Calculates four novelty indicators (Atypicality, Commonness, Bridging, Novelty)
 - Uses the Uzzi2013, Lee2015, Foster2015, and Wang2017 methods from Novelpy
 - Analyzes for each year in the specified range
+- The results are available in the `Result` folder but they are difficult to interpret so we will plot them in the next step
 
 ### c. Visualize results
 1. **Now modify start_year and end_year in plot.py (keep these values same as analysis.py)**
