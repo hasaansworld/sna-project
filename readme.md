@@ -32,15 +32,22 @@ git clone git@github.com:hasaansworld/sna-project.git
 cd sna-project
 ```
 
-**2. Create a python3.9 virtual environment (Novelpy doesn't install on latest python versions)
-   You will need to install Python 3.9 before continuing further**
+2. Install python3.9. Novelpy doesn't install on latest python versions for some reason.
 
+[Windows](https://www.python.org/downloads/release/python-390/)
+[Linux Tutorial](https://medium.com/@sujeeth.selvam/installing-python-3-9-on-ubuntu-linux-908b1c5e060f)
+MacOS: 
+```bash
+brew install python@3.9
+```
+
+3. Create a python3.9 virtual environment
 ```bash
 python3.9 -m venv venv
 source venv/bin/activate # or venv\Scripts\activate on windows
 ```
 
-3. Install required dependencies:
+4. Install required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
