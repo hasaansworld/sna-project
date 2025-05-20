@@ -54,6 +54,7 @@ The `main.py` script performs the following operations:
 - Analyzes reference lists and calculates citation statistics
 - Computes correlations between paper citations and reference list metrics
 - Calculates topic diversity and its correlation with citations
+- Results are available in `step1_selected_papers_set_p.json`, `correlation_results_citations.csv` and `correlation_results_topics.csv` files
 
 ```bash
 python main.py
@@ -64,23 +65,26 @@ python main.py
 This process consists of three scripts that should be run sequentially:
 
 #### a. Create dataset for a specific paper
+Choose one paper from the set of 6 papers. Copy its OpenAlex ID (starts with W)
+**Edit the main function at the end of the create_dataset.py script to specify the paper's OpenAlex ID**
+Then run:
 
 ```bash
 python create_dataset.py
 ```
-**Note: Edit the main function at the end of the script to specify the paper's OpenAlex ID**
 
 This script:
 - Creates a dataset for Novelpy analysis based on the paper's two main concepts
 - Saves the dataset in `Data/docs/[paper_id]/`
 
 #### b. Run novelty analysis
+Now you will have the dataset for the selected paper in `Data/docs/[paper_id]/`. It will have json files for each year (eg 2011.json, 2012.json and so on...). Note the first year and the last year. 
+**Now Modify the paper ID, start_year and end_year in the analysis.py script**
+The run:
 
 ```bash
 python analysis.py
 ```
-
-**Note: Modify the paper ID, start_year and end_year before running the script (you should use first and last year from the `json` files in the dataset folder)**
 
 This script:
 - Calculates four novelty indicators (Atypicality, Commonness, Bridging, Novelty)
@@ -88,14 +92,13 @@ This script:
 - Analyzes for each year in the specified range
 
 #### c. Visualize results
-
+**Now modify start_year and end_year before running the script (keep yearly values same as analysis.py)**
+Then run:
 ```bash
 python plot.py
 ```
-**Note:  Modify start_year and end_year before running the script (from `json` files in the dataset folder)**
 This script:
 - Plots the most recent results from the analysis
-- *Important: Use the same year range as in the analysis step*
 
 ## Methodology Details
 
